@@ -65,7 +65,7 @@
  		.then(function (data) {
  			console.log(data);
  			document.querySelector('.city-name').textContent = data.name;
- 			document.querySelector('.grad-cel').innerHTML = current.temp_c;
+ 			document.querySelector('.grad-cel').innerHTML = data.current.temp_c;
  			document.querySelector('.description').textContent = data.weather[0]['description'];
  			document.querySelector('.icon-weather').innerHTML = data.current.condition.icon;
  		})
