@@ -8,7 +8,7 @@
  <body>
  	<div class="content-container">
  		<header>
-			<div><a href="/"><img src="/weather-logo.png"></a></div>
+			<div class="logo"><a href="/"><img src="/weather-logo.png"></a></div>
 			<h1>Прогноз погоды на ближайшие дни в Сызрани</h1>
 		</header>
  		<div class="left-city-menu">
@@ -32,10 +32,21 @@
  	}
  	header {
  		width: 100%;
+		display: flex;
  	}
- 	h1 {
- 		text-align: center;
- 	}
+	.logo {
+		width: 20%;
+	}
+	.logo img {
+		width: 50%;
+		padding: 25%;
+	}
+	.page-title {
+	 	width: 80%;
+	}
+ 	.page-title h1 {
+	 	margin: 10%;
+	}
  	.content-container{
  		background-color: white;
 		margin: 0 20%;
