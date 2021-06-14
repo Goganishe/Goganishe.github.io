@@ -2,12 +2,75 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>Погода в Москве</title>
-  <!--[if IE]>
-   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <title>Прогноз погоды в таком городе не найден</title>
+  <link rel="shortcut icon" href="/pika3_photo-resizer.ru.ico" type="image/x-icon">
  </head>
  <body>
-  <p>Погода в Даларане <s>норм</s>. Стоп стоп стоп. Он существует развве?</p>
+ 	<div class="content-container">
+ 		<header><h1>Такой город не найден</h1></header>
+ 		<div class="left-city-menu">
+			<a href="/moskva/index.html">Москва</a>
+			<a href="/london/index.html">Лондон</a>
+			<a href="/ny/index.html">Нью-Йорк</a>
+			<a href="/sizran/index.html">Сызрань</a>
+			<a href="/dalaran/index.html">Даларан</a>
+		</div>
+		<div class="main-weather-content">
+			<div>
+    <p>Увы, такого города не существует. Пожалуйста, выберите другой.</p>
+				<p>Для того чтобы узнать прогноз погоды, выберете интересующий Вас город в списке справа.</p>
+			</div>
+   <img src="/404osh.jpg">
+	</div>
  </body>
+ <style type="text/css">
+ 	body {
+ 		background-color: gray;
+ 		margin: 0;
+ 	}
+ 	header {
+ 		width: 100%;
+ 	}
+ 	h1 {
+ 		text-align: center;
+ 	}
+ 	.content-container{
+ 		background-color: white;
+		margin: 0 20%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+ 	}
+ 	.left-city-menu {
+ 		margin: 5%;
+		width: 15%;
+ 	}
+ 	.left-city-menu a {
+ 		padding: 20px;
+		text-decoration: none;
+		color: black;
+		font-weight: 600;
+		display: block;
+		box-shadow: 0px 0px 3px gray;
+		margin-bottom: 15px;
+		border-radius: 5px;
+ 	}
+ 	.left-city-menu a:hover {
+ 		box-shadow: 0 0 20px black;
+ 	}
+ 	.left-city-menu a:last-child {
+ 		margin-bottom: 0px;
+ 	}
+ 	.main-weather-content {
+		margin: 5%;
+		width: 60%;
+ 	}
+ 	.main-weather-content div {
+ 		box-shadow: 0px 0px 3px gray;
+		border-radius: 5px;
+		height: 50px;
+		padding: 2%;
+		margin-bottom: 5%;
+ 	}
+ </style>
 </html>
