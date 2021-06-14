@@ -2,12 +2,83 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>Погода в Москве</title>
-  <!--[if IE]>
-   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+  <title>Прогноз погоды в Лондоне</title>
+  <link rel="shortcut icon" href="/pika3_photo-resizer.ru.ico" type="image/x-icon">
  </head>
  <body>
-  <p>Погода в Лондоне норм</p>
+ 	<div class="content-container">
+ 		<header><h1>Прогноз погоды на ближайшие дни в Лондоне</h1></header>
+ 		<div class="left-city-menu">
+			<a href="/moskva/index.html">Москва</a>
+			<a href="/london/index.html" class="selected">Лондон</a>
+			<a href="/ny/index.html">Нью-Йорк</a>
+			<a href="/sizran/index.html">Сызрань</a>
+			<a href="/dalaran/index.html">Даларан</a>
+		</div>
+		<div class="main-weather-content">
+			<div>
+				
+			</div>
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7f3b1c9983d39d99e583623180000b59e5953adec2faadce26644156814b7411&amp;width=100%25&amp;height=68%&amp;lang=ru_RU&amp;scroll=true">
+			</script>
+			<script type="text/javascript">
+				var myMap = new ymaps.Map('map', {
+        		controls: []
+    			});
+			</script>
+	</div>
  </body>
+ <style type="text/css">
+ 	body {
+ 		background-color: gray;
+ 		margin: 0;
+ 	}
+ 	header {
+ 		width: 100%;
+ 	}
+ 	h1 {
+ 		text-align: center;
+ 	}
+ 	.content-container{
+ 		background-color: white;
+		margin: 0 20%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+ 	}
+ 	.left-city-menu {
+ 		margin: 5%;
+		width: 15%;
+ 	}
+ 	.left-city-menu a {
+ 		padding: 20px;
+		text-decoration: none;
+		color: black;
+		font-weight: 600;
+		display: block;
+		box-shadow: 0px 0px 3px gray;
+		margin-bottom: 15px;
+		border-radius: 5px;
+ 	}
+ 	.left-city-menu a:hover {
+ 		box-shadow: 0 0 20px black;
+ 	}
+  .selected {
+   box-shadow: 0 0 20px black;
+  }
+ 	.left-city-menu a:last-child {
+ 		margin-bottom: 0px;
+ 	}
+ 	.main-weather-content {
+		margin: 5%;
+		width: 60%;
+ 	}
+ 	.main-weather-content div {
+ 		box-shadow: 0px 0px 3px gray;
+		border-radius: 5px;
+		height: 50px;
+		padding: 2%;
+		margin-bottom: 5%;
+ 	}
+ </style>
 </html>
