@@ -6,6 +6,7 @@
  </head>
  <body>
  	<div class="content-container">
+ 		<header><h1>Прогнозы погоды на ближайшие дни</h1></header>
  		<div class="left-city-menu">
 			<div><a href="/moskva/index.html">Москва</a></div>
 			<div><a href="/london/index.html">Лондон</a></div>
@@ -13,19 +14,27 @@
 			<div><a href="/sizran/index.html">Сызрань</a></div>
 			<div><a href="/dalaran/index.html">Даларан</a></div>
 		</div>
-
+		<div class="main-weathe-content">
+			
+		</div>
 	</div>
  </body>
  <style type="text/css">
  	body {
  		background-color: gray;
  	}
+ 	header {
+
+ 	}
  	.content-container{
  		background-color: white;
  		margin: 0 20%;
+ 		display: flex;
+ 		flex-flow: row wrap;
+ 		justify-content: center;
  	}
  	.left-city-menu {
- 		
+ 		margin: 5%;
  	}
  </style>
 </html>
