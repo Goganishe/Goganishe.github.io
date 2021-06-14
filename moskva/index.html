@@ -29,12 +29,36 @@
 				<hr>
 				<p class="icon-weather"></p>
 			</div>
+			<div class="weather-element">
+				<p class="city-name"></p>
+				<hr>
+				<p class="grad-cel"></p>
+				<p class="description"></p>
+				<hr>
+				<p class="icon-weather"></p>
+			</div>
+			<div class="weather-element">
+				<p class="city-name"></p>
+				<hr>
+				<p class="grad-cel"></p>
+				<p class="description"></p>
+				<hr>
+				<p class="icon-weather"></p>
+			</div>
+			<div class="weather-element">
+				<p class="city-name"></p>
+				<hr>
+				<p class="grad-cel"></p>
+				<p class="description"></p>
+				<hr>
+				<p class="icon-weather"></p>
+			</div>
 			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aab612b02125d782b031471468e703b679e0225077c5f176d3605e397f5b7de2e&amp;width=100%25&amp;height=68%&amp;lang=ru_RU&amp;scroll=true"></script>
 		</div>
 	</div>
  </body>
  <script type="text/javascript">
- 	fetch('https://api.openweathermap.org/data/2.5/weather?id=524901&appid=e279efdb8654b17871a07f96f8349323')
+ 	fetch('https://api.openweathermap.org/data/2.5/weather?id=524901&cnt=4&appid=e279efdb8654b17871a07f96f8349323')
  		.then(function (resp) {return resp.json() })
  		.then(function (data) {
  			console.log(data);
