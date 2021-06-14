@@ -21,37 +21,39 @@
 			<a href="/dalaran/index.html">Даларан</a>
 		</div>
 		<div class="main-weather-content">
-			<div class="weather-element">
-				<p class="city-name"></p>
-				<hr>
-				<p class="grad-cel"></p>
-				<p class="description"></p>
-				<hr>
-				<p class="icon-weather"></p>
-			</div>
-			<div class="weather-element">
-				<p class="city-name"></p>
-				<hr>
-				<p class="grad-cel"></p>
-				<p class="description"></p>
-				<hr>
-				<p class="icon-weather"></p>
-			</div>
-			<div class="weather-element">
-				<p class="city-name"></p>
-				<hr>
-				<p class="grad-cel"></p>
-				<p class="description"></p>
-				<hr>
-				<p class="icon-weather"></p>
-			</div>
-			<div class="weather-element">
-				<p class="city-name"></p>
-				<hr>
-				<p class="grad-cel"></p>
-				<p class="description"></p>
-				<hr>
-				<p class="icon-weather"></p>
+			<div class="weather-elements">
+				<div class="weather-element">
+					<p class="city-name"></p>
+					<hr>
+					<p class="grad-cel"></p>
+					<p class="description"></p>
+					<hr>
+					<p class="icon-weather"></p>
+				</div>
+				<div class="weather-element">
+					<p class="city-name"></p>
+					<hr>
+					<p class="grad-cel"></p>
+					<p class="description"></p>
+					<hr>
+					<p class="icon-weather"></p>
+				</div>
+				<div class="weather-element">
+					<p class="city-name"></p>
+					<hr>
+					<p class="grad-cel"></p>
+					<p class="description"></p>
+					<hr>
+					<p class="icon-weather"></p>
+				</div>
+				<div class="weather-element">
+					<p class="city-name"></p>
+					<hr>
+					<p class="grad-cel"></p>
+					<p class="description"></p>
+					<hr>
+					<p class="icon-weather"></p>
+				</div>
 			</div>
 			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aab612b02125d782b031471468e703b679e0225077c5f176d3605e397f5b7de2e&amp;width=100%25&amp;height=68%&amp;lang=ru_RU&amp;scroll=true"></script>
 		</div>
@@ -127,11 +129,15 @@
 		margin: 5%;
 		width: 60%;
  	}
+ 	.weather-elements {
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		justify-content: flex-start;
+ 	}
  	.weather-element {
  		width: 20%;
  		box-shadow: 0 0 3px gray;
  		padding: 5%;
- 		width: 20%;
  	}
  	.weather-element p {
  		text-align: center;
