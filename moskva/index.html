@@ -52,6 +52,7 @@
 		</div>
 	</body>
 	<script type="text/javascript">
+		let weatherElement = document.querySelector('.weather-element')
 		if (weatherElement.classList.contains('today'))  {
  			//Получаем прогноз в массив data
 			fetch('https://api.openweathermap.org/data/2.5/onecall?lat=55.75&lon=37.61&exclude=daily&lang=ru&units=metric&appid=6b2794372fac1eec43276eb6809f11e6').then(function (resp) {return resp.json() }).then(function (data) {
