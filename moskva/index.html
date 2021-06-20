@@ -22,19 +22,19 @@
 			</div>
 			<div class="main-weather-content">
 				<div class="weather-elements">
-					<div class="weather-element yesterday">
+					<!--<div class="weather-element yesterday">
 						<p class="grad-cel"></p>
 						<p class="description"></p>
 						<hr>
 						<p class="icon-weather"></p>
-					</div>
+					</div>-->
 					<div class="weather-element today">
 						<p class="grad-cel"></p>
 						<p class="description"></p>
 						<hr>
 						<p class="icon-weather"></p>
 					</div>
-					<div class="weather-element tomorrow">
+					<!--<div class="weather-element tomorrow">
 						<p class="grad-cel"></p>
 						<p class="description"></p>
 						<hr>
@@ -45,15 +45,13 @@
 						<p class="description"></p>
 						<hr>
 						<p class="icon-weather"></p>
-					</div>
+					</div>-->
 				</div>
 				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aab612b02125d782b031471468e703b679e0225077c5f176d3605e397f5b7de2e&amp;width=100%25&amp;height=68%&amp;lang=ru_RU&amp;scroll=true"></script>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
-		let weatherElement = document.querySelector('.weather-element')
-		if (weatherElement.classList.contains('today'))  {
  			//Получаем прогноз в массив data
 			fetch('https://api.openweathermap.org/data/2.5/onecall?lat=55.75&lon=37.61&exclude=daily&lang=ru&units=metric&appid=6b2794372fac1eec43276eb6809f11e6').then(function (resp) {return resp.json() }).then(function (data) {
     			//data.main.temp содержит значение в Кельвинах, отнимаем от  273, чтобы получить значение в градусах Цельсия
@@ -66,7 +64,6 @@
 	    	.catch(function () {
 	        //Обрабатываем ошибки
 	    	});
-    	};
 	</script>
 	<style type="text/css">
  		body {
