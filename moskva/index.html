@@ -61,7 +61,7 @@
 	</body>
 	<script type="text/javascript">
  		//Получаем прогноз в массив data
-		fetch('http://api.openweathermap.org/data/2.5/forecast/daily?id=524894&lang=ru&units=metric&appid=6cc3148bb3b32c3700a98d81defdd8a7').then(function (resp) {return resp.json() }).then(function (data) {
+		fetch('https://api.openweathermap.org/data/2.5/forecast/daily?id=524894&lang=ru&units=metric&appid=6cc3148bb3b32c3700a98d81defdd8a7').then(function (resp) {return resp.json() }).then(function (data) {
     		//добавляем название города
     		document.querySelector('.city-name').textContent = data.name;
     		//data.main.temp содержит значение в Кельвинах, отнимаем от  273, чтобы получить значение в градусах Цельсия
