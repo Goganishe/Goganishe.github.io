@@ -13,42 +13,34 @@
 					<h1>Прогноз погоды на ближайшие дни в Москве</h1>
 				</div>
 			</header>
- 			<div class="left-city-menu" id="city">
-				<a href="/moskva/index.html" class="selected" value="524894">Москва</a>
-				<a href="/london/index.html" value="2643743">Лондон</a>
-				<a href="/ny/index.html" value="5128581">Нью-Йорк</a>
-				<a href="/sizran/index.html" value="484972">Сызрань</a>
-				<a href="/dalaran/index.html" value="">Даларан</a>
+ 			<div class="left-city-menu">
+				<a href="/moskva/index.html" class="selected">Москва</a>
+				<a href="/london/index.html">Лондон</a>
+				<a href="/ny/index.html">Нью-Йорк</a>
+				<a href="/sizran/index.html">Сызрань</a>
+				<a href="/dalaran/index.html">Даларан</a>
 			</div>
 			<div class="main-weather-content">
 				<div class="weather-elements">
-					<div class="weather-element">
-						<p class="city-name"></p>
-						<hr>
+					<div class="weather-element yesterday">
 						<p class="grad-cel"></p>
 						<p class="description"></p>
 						<hr>
 						<p class="icon-weather"></p>
 					</div>
-					<div class="weather-element">
-						<p class="city-name"></p>
-						<hr>
+					<div class="weather-element today">
 						<p class="grad-cel"></p>
 						<p class="description"></p>
 						<hr>
 						<p class="icon-weather"></p>
 					</div>
-					<div class="weather-element">
-						<p class="city-name"></p>
-						<hr>
+					<div class="weather-element tomorrow">
 						<p class="grad-cel"></p>
 						<p class="description"></p>
 						<hr>
 						<p class="icon-weather"></p>
 					</div>
-					<div class="weather-element">
-						<p class="city-name"></p>
-						<hr>
+					<div class="weather-element after-tomorrow">
 						<p class="grad-cel"></p>
 						<p class="description"></p>
 						<hr>
@@ -60,20 +52,20 @@
 		</div>
 	</body>
 	<script type="text/javascript">
- 		//Получаем прогноз в массив data
-		fetch('https://api.openweathermap.org/data/2.5/forecast/daily?id=524894&lang=ru&units=metric&cnt=4&appid=6b2794372fac1eec43276eb6809f11e6').then(function (resp) {return resp.json() }).then(function (data) {
-    		//добавляем название города
-    		document.querySelector('.city-name').textContent = data.name;
-    		//data.main.temp содержит значение в Кельвинах, отнимаем от  273, чтобы получить значение в градусах Цельсия
-    		document.querySelector('.grad-cel').innerHTML = Math.round(data.main.temp - 273) + '&deg;';
-    		//Добавляем описание погоды
-    		document.querySelector('.description').textContent = data.weather[0]['description'];
-    		//Добавляем иконку погоды
-    		document.querySelector('.icon-weather').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
-    		})
-    	.catch(function () {
-        //Обрабатываем ошибки
-    });
+		if (weatherElement.classList.contains('today'))  {
+ 			//Получаем прогноз в массив data
+			fetch('https://api.openweathermap.org/data/2.5/onecall?lat=55.75&lon=37.61&exclude=daily&lang=ru&units=metric&appid=6b2794372fac1eec43276eb6809f11e6').then(function (resp) {return resp.json() }).then(function (data) {
+    			//data.main.temp содержит значение в Кельвинах, отнимаем от  273, чтобы получить значение в градусах Цельсия
+    			document.querySelector('.grad-cel').innerHTML = Math.round(data.temp.day - 273) + '&deg;';
+	    		//Добавляем описание погоды
+	    		document.querySelector('.description').textContent = data.weather[0]['description'];
+	    		//Добавляем иконку погоды
+	    		document.querySelector('.icon-weather').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
+	    		})
+	    	.catch(function () {
+	        //Обрабатываем ошибки
+	    	});
+    	};
 	</script>
 	<style type="text/css">
  		body {
