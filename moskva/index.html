@@ -53,7 +53,7 @@
 	</body>
 	<script type="text/javascript">
  			//Получаем прогноз в массив data
-			fetch('https://api.openweathermap.org/data/2.5/onecall?id=2123628&exclude=daily&lang=ru&units=metric&appid=6b2794372fac1eec43276eb6809f11e6').then(function (resp) {return resp.json() }).then(function (data) {
+			fetch('https://api.openweathermap.org/data/2.5/onecall?lat=55.75&lon=37.61&exclude=daily&lang=ru&units=metric&appid=6b2794372fac1eec43276eb6809f11e6').then(function (resp) {return resp.json() }).then(function (data) {
     			//data.main.temp содержит значение в Кельвинах, отнимаем от  273, чтобы получить значение в градусах Цельсия
     			document.querySelector('.grad-cel').innerHTML = data.current.temp + '&deg;';
 	    		//Добавляем описание погоды
